@@ -29,7 +29,9 @@ function updateTable(data){
 // filter the table 
 function filterTable(){
     var filterData = tableData;
+    // Select the input element and  Get the value property of the input elements
     var date = d3.select("#datetime").property("value");
+    //  Create if statements for the filter
     if (date){
         filterData = filterData.filter(result => result.datetime === date);
         updateTable(filterData);
